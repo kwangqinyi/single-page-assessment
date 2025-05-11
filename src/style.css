@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ...not done yet */
+@theme {
+  --color-main-text: #000000;
+  --color-bg-theme: #ffffff;
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: oklch(90.1% 0.058 230.902);
+  --color-primary: #35BAD8;
+  --color-secondary: oklch(70.7% 0.165 254.624);
+  --color-profile-bg: #35BAD8;
+  --color-btn-solid: #35BAD8; 
+  --color-btn-solid-hover: #55D9F6;
+  --color-card-bg: #ffffff;
+  --color-pagination-active: #35BAD8;
+
+  --shadow :0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+@layer theme {
+  .dark {
+    --color-main-text: #ffffff;
+    --color-bg-theme: oklch(27.9% 0.041 260.031);
+    --color-bg-primary: oklch(21% 0.034 264.665);
+    --color-bg-secondary: oklch(70.4% 0.04 256.788);
+    --color-primary: #35BAD8;
+    --color-secondary: 124,143,172;
+    --color-profile-bg: #486581;
+    --color-btn-solid: #829ab1; 
+    --color-btn-solid-hover: #bcccdc;
+    --color-card-bg: #486581;
+    --color-pagination-active: #486581 
+
+    --shadow :0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+
+body {
+  background: var(--color-bg-theme);
+  color: var(--color-main-text);
+}
